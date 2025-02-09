@@ -1,5 +1,4 @@
-// src/utils/api.js
-const BASE_URL = "http://localhost:5000/api/posts";
+const BASE_URL = "https://reddit-analytics-backend.onrender.com/api/posts";
 
 export const getAllPosts = async () => {
   const res = await fetch(`${BASE_URL}/`);

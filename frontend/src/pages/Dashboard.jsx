@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Dashboard.css";
 
+const BASE_URL = "https://reddit-analytics-backend.onrender.com/api/posts";
+const SCRAPE_URL = "https://reddit-analytics-backend.onrender.com/api/scrape";
+
 const Dashboard = () => {
   const [scrapedData, setScrapedData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -14,10 +17,10 @@ const Dashboard = () => {
     async function fetchData() {
       try {
         const responses = await Promise.all([
-          fetch("http://localhost:5000/api/posts/top"),
-          fetch("http://localhost:5000/api/posts/recent"),
-          fetch("http://localhost:5000/api/posts/popular-authors"),
-          fetch("http://localhost:5000/api/posts/trends"),
+          fetch(`${BASE_URL}/top`),
+          fetch(`${BASE_URL}/recent`),
+          fetch(`${BASE_URL}/popular-authors`),
+          fetch(`${BASE_URL}/trends`),
         ]);
 
         // Ensure responses are valid before parsing
@@ -45,7 +48,7 @@ const Dashboard = () => {
   const handleScrape = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/scrape");
+      const response = await fetch(SCRAPE_URL);
 
       if (!response.ok) {
         throw new Error("Scraping request failed");
