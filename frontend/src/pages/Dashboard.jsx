@@ -72,12 +72,12 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <h1 className="dashboard-title">🔥 Reddit Analytics Dashboard</h1>
+      <h1 className="dashboard-title">Reddit Analytics Dashboard</h1>
 
       {/* Scraper Button */}
       <div className="scrape-section">
         <button onClick={handleScrape} disabled={loading} className="scrape-button">
-          {loading ? "⏳ Scraping..." : "🚀 Trigger Scraper"}
+          {loading ? "⏳ Scraping..." : "Trigger Scraper"}
         </button>
       </div>
 

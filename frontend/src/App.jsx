@@ -1,9 +1,9 @@
-// src/App.jsx
+// src/App.jsx - Updated to Replace Posts with Analytics
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
-import Posts from "./pages/Posts";
+import Analytics from "./pages/Analytics";
 import PostDetail from "./pages/PostDetail";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/posts" element={<Posts />} />
+        <Route path="/analytics" element={<Analytics />} />
         <Route path="/posts/:id" element={<PostDetail />} />
       </Routes>
     </Router>

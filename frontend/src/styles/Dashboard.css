@@ -1,11 +1,11 @@
-/* Container */
+/* Dashboard Container */
 .dashboard-container {
   padding: 20px;
   max-width: 900px;
   margin: auto;
-  background-color: #181818;
+  background-color: #101010; /* Sleek, deeper dark mode */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 /* Title */
@@ -13,7 +13,7 @@
   font-size: 26px;
   font-weight: bold;
   text-align: center;
-  color: #ffffff;
+  color: #d9d9d9; /* Slightly softened white */
   margin-bottom: 20px;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .scrape-button {
-  background-color: #ff9800;
+  background-color: #26a69a; /* Modern teal-green */
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 25px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
@@ -37,22 +37,26 @@
 }
 
 .scrape-button:hover {
-  background-color: #e68a00;
-  transform: scale(1.05);
+  background-color: #1e847f;
+  transform: scale(1.1);
 }
 
-/* Dashboard Box */
+/* Dashboard Sections */
 .dashboard-box {
-  background-color: #222;
+  background-color: #151515; /* Rich black */
   padding: 15px;
   border-radius: 6px;
   margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.07);
 }
 
+/* Section Titles */
 .dashboard-box h2 {
   font-size: 20px;
-  color: #ffd700; /* Bright yellow */
+  color: #26a69a; /* New accent color */
   font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(38, 166, 154, 0.5);
 }
 
 /* List Styling */
@@ -61,61 +65,53 @@
   padding: 0;
 }
 
-.info-list li {
-  background-color: #333;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 4px;
-  color: #e0e0e0; /* Light gray for readability */
-  text-align: center;
-}
-
-/* Scraped Posts */
-.post-list {
-  list-style-type: none;
-  padding: 0;
-}
-
+/* Modern Hover Effect for Posts */
 .post-item {
   background-color: #222;
-  padding: 12px;
-  border-radius: 5px;
-  margin-bottom: 6px;
-  transition: background 0.3s;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: #b0b0b0; /* Subtle gray for elegance */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-item:hover {
-  background-color: #333;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
 }
 
 /* Post Links */
 .post-link {
   text-decoration: none;
-  color: #4da6ff; /* Bright blue */
+  color: #26a69a;
   font-size: 16px;
   font-weight: bold;
   transition: color 0.2s;
 }
 
 .post-link:hover {
-  color: #ffa500; /* Orange hover effect */
+  color: #ffcc80;
   text-decoration: underline;
 }
 
 /* Post Author */
 .post-author {
-  color: #bbb;
+  color: #888888;
   font-size: 14px;
 }
 
-/* Dark Mode Contrast Improvements */
-h2, h3 {
-  color: #ffcc00; /* Bright yellow */
-  font-weight: bold;
+/* Keyword Tags */
+.keyword-tag {
+  background-color: #292929;
+  color: #d0d0d0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 12px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.no-data {
-  color: #ff6666;
-  font-weight: bold;
-  text-align: center;
+.keyword-tag:hover {
+  background-color: #353535;
+  transform: scale(1.1);
 }
